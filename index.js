@@ -1,12 +1,11 @@
 const Discord = require("discord.js")
 require("dotenv").config()
 
-const TOKEN ="OTQ0MDk5MDc4NjA0NzI2Mzg0.Yg8qyA.wbZTzwGWd0DgIwCGYx7OqA2JuNE"
-
 const client = new Discord.Client({
     intents: [
         "GUILDS",
-        "GUILD_MESSAGES"
+        "GUILD_MESSAGES",
+        "GUILD_MEMBERS"
     ]
 })
 
@@ -16,7 +15,7 @@ client.on("ready", () => {
 
 client.on("messageCreate", (message)=>{
     if(message.content == "hi"){
-        message.reply("Hellow World!")
+        message.reply("Hellow")
     }
 })
 
